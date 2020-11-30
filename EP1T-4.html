@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio Puntuable EP1T-4</title>
+    <!--Indicamos al documento html la ruta y archivo de la hoja de estilos-->
+    <link rel="stylesheet" type="text/css" href="EP1T-4.css">
+</head>
+
+<body>
+    <div id="header">Pruebe su próximo vehículo</div><br>
+    <div class="container">
+        <form method="post" id="form" action="mailto:atolon@fundacionsafa.es" enctype="text/plain" autocomplete="on">
+            <ul type="none">
+                <li><label for="nombre">Nombre: </label><input type="text" name="nombre" placeholder="Tu nombre" class="caja" required autofocus></li>
+                <hr>
+                <li><label for="apellidos">Apellidos: </label><input type="text" name="apellidos" placeholder="Tus apellidos" class="caja" required></li>
+                <hr>         <!--Añadimos un patrón restrictivo para la dirección de correo con expresiones regulares-->
+                <li>
+                    <div class="tooltip">
+                    <label for="email">Email: </label>
+                    <input type="email" pattern="[^@\s]+@[^@\s]+.es+" title="Formato correcto: etiqueta@dominio.es" name="email" placeholder="etiqueta@dominio.es" class="caja" required>
+                    <span class="tooltiptext">Formato correcto: etiqueta@dominio.es</span>
+                    </div>   
+                </li>
+                <hr>
+                <li><label for="carnet">Años de carnet: </label><input type="number" min="0" name="carnet"  placeholder="0" class="caja" required></li>
+                <hr>
+                <li><label for="precio">Precio buscado: </label><input type="range" name="precio" id="precio" class="caja" value="5000" min="5000" max="200000" step="500" oninput="this.nextElementSibling.value this.value" onchange="document.getElementById('outprecio') .value=value" required> Valor actual: <output id="outprecio" name="outprecio" for="precio">5000</output></li>
+                <hr>
+                <li><label for="combustible" id="labelcomb">Tipo Combustible: </label>
+                        <select id="combustible" name="combustible" class="combustible" required>
+                            <option></option>
+                            <option value="hibrido">Híbrido</option>
+                            <option value="electrico">Eléctrico</option>
+                            <option value="gasolina">Gasolina</option>
+                            <option value="glp">GLP</option>
+                        </select>
+                </li>
+                <hr>
+                <li><label for="color">Color preferido: </label><input type="color" name="color" class="color" required></li>
+                <hr>        <!--Añadimos un patrón restrictivo para la dirección web con expresiones regulares-->
+                <li>
+                    <div class="tooltip">
+                        <label for="web">Sitio web habitual: </label>
+                        <input type="url" pattern="[^@\s]+[^@\s]+\.[^@\s]+" title="Formato correcto: http://direccionweb.es" name="web" placeholder="http://fundacionsafa.es" class="caja" required>
+                        <span class="tooltiptext">Formato correcto: http://direccionweb.es</span>
+                    </div>
+                </li>
+                <hr>                    
+                <li><label for="fecha">Fecha de la prueba: </label><input type="date" name="fecha" class="caja" required></li>
+                <hr>
+                <li><label for="mensaje">A tener en cuenta: </label><textarea name="mensaje" rows="8" cols="42" class="mensaje" required></textarea></li>
+                <hr>
+                <li><label for="cuponpdf">Subida cupón PDF: </label><input type="file" class="cuponpdf" name="cuponpdf"></li>
+                <hr>
+                <li><label></label><input type="submit" value="Enviar Datos" class="enviar"></li>
+                <hr/>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

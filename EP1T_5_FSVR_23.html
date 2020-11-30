@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="EP1T_5_FSVR_23.css">
+	<title>Ejercicio Puntuable EP1T-5</title>
+</head>
+
+<body>
+	<header>
+		<img src="manzterra.jpg" alt="ERROR 404 - Imagen no encontrada">
+		<h1>¿Conoces el Acuerdo por el Clima firmado en París?</h1>
+	</header>
+	<form action="mailto:atolon@fundacionsafa.es" method="POST" accept-charset="utf-8" id="Clima">
+		<section>
+			<h2 id="cabecera">¡Con tu apoyo, lo lograremos!</h2>
+			<div class="bloque">
+				<label for="name">Nombre:</label><span>&nbsp;*</span><br>
+				<input type="text" id="name" name="name" maxlength="100" placeholder="Nombre y primer apellido" required>
+			</div>
+			<div class="bloque">
+				<label for="Sexo">Sexo:</label><span>&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<input type="radio" id="Hombre" name="genero" value="Hombre" required>Hombre
+				<input type="radio" id="Mujer" name="genero" value="Mujer" required>Mujer
+			</div>
+			<div class="bloque">
+				<label for="email">Dirección de correo:</label><span>&nbsp;*</span><br>
+				<!--Pattern con expresiones regulares para navegadores no compatibles con el type email-->
+				<input type="email" id="myEmail" name="email" placeholder="identificador@dominio.es"
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required />
+				<!--Usamos JavaScript para intentar controlar el input del usuario -->
+					<script>
+					function myFunction() {
+						var x = document.getElementById("myEmail").pattern;
+					}
+				</script>
+			</div>
+			<div class="bloque">
+				<label for="web">Blog que recomiendas leer:</label><br>
+				<!--Pattern con expresiones regulares para navegadores no compatibles con el type url-->
+				<input type="url" id="myWeb" name="web"
+					pattern="^(?:http(s)?://)?[\w.-]+(?:.[\w.-]+)+[\w-._~:/?#[]@!$&'()*+,;=.]+\.[a-z]{2,3}$" />
+				<!--Usamos javascript para intentar controlar el input del usuario -->
+					<script>
+					function myFunction2() {
+						var x = document.getElementById("myWeb").pattern;
+					}
+				</script>
+			</div>
+			<div class="bloque">
+				<label for="colaborar">Puedo colaborar:</label><br>
+				<select name="colaborar" id="colaborar">
+					<option value="---">---</option>
+					<option value="rrss">Difundiéndolo en redes sociales</option>
+					<option value="charlas">Impartiendo charlas sobre el tema</option>
+					<option value="concentraciones">Organizando concentraciones de apoyo</option>
+				</select>
+			</div>
+			<div class="bloque">
+				<label for="comentarios">Mensaje que nos dejas:</label><span>&nbsp;*</span><br>
+				<textarea name="comentarios" placeholder="Escribe aquí tu mensaje, por favor" required></textarea>
+			</div>
+			<label><span class="input-label">&nbsp;</span><input type="submit" name="submit" value="¡Envíalo!"></label>
+		</section>
+	</form>	
+	<footer id="cssvalido">
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px"
+					src="http://jigsaw.w3.org/css-validator/images/vcss"
+					alt="¡CSS Válido!" />
+			</a>
+		</p>
+	</footer>
+</body>
+</html>

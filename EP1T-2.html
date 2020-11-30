@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+        <title>Ejercicio Puntuable EP1T-2</title>
+        <style>
+        body{
+            background-color:#CD5C5C;
+            color:black;
+        }
+        h1{
+            text-align: center;
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+        }
+        #products{
+            background-color:#F4A460;
+            text-align: center;
+
+        }
+        div{
+            background-color:#F4A460;
+            text-align: left;
+            color:#000080;
+
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            color:black;
+        }
+        thead{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+        tbody{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+        footer{
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <hr/>
+            <h1>Formulario de Venta</h1>
+            <hr/>
+        </header>
+        <form method="post" action="mailto:atolon@fundacionsafa.es" enctype="text/plain">
+            <div id="products">
+                <h2>Productos</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td><strong>Sel.</strong></td>
+                            <td><strong>Portada</strong></td>
+                            <td><strong>Artista</strong></td>
+                            <td><strong>Álbum</strong></td>
+                            <td><strong>Precio</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="https://es.wikipedia.org"><img src="https://www.cancioneros.com/imatges/1672.gif" width="30px" height="30px"></a></td>
+                            <td align="left">Javier Ruibal</td>
+                            <td align="left">La piel de Sara</td>
+                            <td align="left">17.85 €</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="https://www.oxfamintermon.org"><img src="Images/mkbn.jpg" width="30px" height="30px"></a></td>
+                            <td align="left">Mari Kvien Brunvoll</td>
+                            <td align="left">Bajazz</td>
+                            <td align="left">15.25 €</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="https://www.greenpeace.org/espana/es"><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/672/MI0001672424.jpg?partner=allrovi.com" width="30px" height="30px"></a></td>
+                            <td align="left">Anna Maria Jopek</td>
+                            <td align="left">Secret</td>
+                            <td align="left">19.35 €</td>
+                        </tr>
+                    </tbody>                
+                </table>
+                <br/>
+            </div>
+            <div>
+                <h2>Datos Personales</h2>
+                Nombre y Apellidos: <input type="text" size="40" name="name"><br/>
+                Dirección: <input type="text" size="30" name="address"><br/>
+                Localidad: <input type="text" size="20" name="city">
+                C.P.: <input type="text" size="5" maxlength="5" name="zipcode"><br/>
+                Nacionalidad: <input type="radio" name="nacionality" value="Spanish">Español <input type="radio" name="nacionality" value="Not-Spanish">Extranjero<br/>
+                <br/>
+            </div>
+            <div>
+                <h2>Forma de pago</h2>
+                Tipo Tarjeta:   <select name="cardtype">
+                                    <option>VISA</option>
+                                    <option>MasterCard</option>
+                                    <option>American Express</option>
+                                </select>
+                <br/>
+                Nº Tarjeta: <input type="text" size="25" maxlength="25" name="numcard">
+                CVV: <input type="text" size="3" maxlength="3" name="cvv"><br/>
+                Importe: <input type="text" size="7" maxlength="7" name="price">
+                <br/><br/>
+            </div>
+            <a href="url" target="new">hola
+            <footer>
+                <textarea rows="10" cols="50" name="comments" placeholder="Indícanos cómo podemos mejorar"></textarea>
+                <br/><br/>
+                <input type="submit" value="Enviar Datos"> 
+                <input type="reset" value="Resetear">
+            </footer>
+        </form>
+    </body>
+</html>
+

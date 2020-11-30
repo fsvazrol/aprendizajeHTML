@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+/*Damos formato al cuerpo de la página web*/
+body { 
+	background-color:#ffffff; 
+	font-family: Arial; 
+	font-size: 15px;
+}
+/* Establecemos ancho y márgenes del formulario */
+form {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Damos formato al encabezado central de la página y añadimos la imágen de fondo */
+#header {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	background-image: url(Images/ppaper.jpg);
+	width: 350px;
+	height: 25px;
+	border-style: solid;
+	border-color: #000000; 
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+}
+/* Damos color a la línea horizontal que separa cada fila del formulario */
+hr{
+	color: #ddd;
+}
+/* Añadimos 15px de margen superior e inferior a los campos del formulario */
+li {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/* Damos formato a label */
+label {
+	display: inline-block;	/* Con inline-block se respetan los márgenes/rellenos superiores e inferiores y permite añadir más elementos en la misma línea */
+	width: 160px;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* Para que el botón del range sea idéntico en todos los navegadores utilizamos un fragmento de código que otro diseñador web ha compartido tan generosamente */
+input[type=range] {
+	margin: 7px 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	background: #3071a9;
+	border: 0.2px solid #010101;
+	border-radius: 1.3px;
+	height: 1px;
+	cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+	margin-top: -7.2px;
+	width: 15px;
+	height: 15px;
+	background: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 14px;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #3276b1;
+}
+input[type=range]::-moz-range-track {
+	background: #3071a9;
+	border: 0.2px solid #010101;
+	border-radius: 1.3px;
+	height: 1px;
+	cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+	width: 15px;
+	height: 15px;
+	background: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 14px;
+	cursor: pointer;
+}
+input[type=range]::-ms-track {
+	background: transparent;
+	border-color: transparent;
+	border-width: 8px 0;
+	color: transparent;
+	height: 1px;
+	cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+	background: #2e6ca1;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+	background: #3071a9;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+	width: 15px;
+	height: 15px;
+	background: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 14px;
+	cursor: pointer;
+	margin-top: 0px;
+	/*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+	background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+	background: #3276b1;
+}
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the vertical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+	/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+	input[type=range] {
+	  margin: 0;
+	  /*Edge starts the margin from the thumb, not the track as other browsers do*/
+	}
+}
+/* Fin del código encontrado en internet */
+
+
+#labelcomb {
+	display: inline-block;	/* Con inline-block se respetan los márgenes/rellenos superiores e inferiores y permite añadir más elementos en la misma línea */
+	width: 160px;
+	margin-top: 1px;
+}
+/* Con .caja damos formato a todos los campos que debe rellenar el usuario */
+.caja {
+	border:solid rgb(200, 200, 200);
+	border-width: 1px;
+	width: 30%;
+	height: 25px;
+	background-color: #fdfdfd;
+	box-shadow: 0px 10px 10px 2px rgb(240, 240, 240) inset;		/* Establece una sombra rgb al elemento */
+	border-radius: 3px;
+	border-color: rgb(187, 187, 187);
+}
+/* Damos formato al aviso en rojo que sale al clicar en email y web */
+.tooltip {
+	width: 18.8cm;
+	height: 25px;
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px red;
+	border-top: 1px red;
+	border-left: 1px red;
+	border-right: 1px red;
+  }
+.tooltip .tooltiptext {
+	visibility: hidden;
+	font-size: small;
+	width: 260px;
+	background-color: rgb(243, 13, 13);
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	top: -0.5px;
+	left: 54%;
+}
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent red transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+input.email:invalid {
+	border: 2px solid red;
+}
+input.web:invalid {
+	border: 2px solid red;
+}		
+input.email:valid {
+	border: 2px solid green;
+}
+		
+input.web:valid {border: 2px solid green;}
+/* Formato específico para el campo Precio */
+#precio {
+	border:solid rgb(200, 200, 200);
+	border-width: 1px;
+	outline: #000000;
+	outline-style: 1px;
+	outline-width: 1px;
+	width: 30%;
+	height: 25px;
+	background-color: #fdfdfd;
+	box-shadow: 5px 3px 7px 3px rgb(240, 240, 240) inset;		/* Establece una sombra rgb al elemento */
+	border-color: #ddd;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+/* Formato específico para el campo del combustible */
+.combustible {
+	border:solid rgb(200, 200, 200);
+	border-width: 1px;
+	width: 25.5%;
+	height: 18px;
+	background-color: #fdfdfd;
+	box-shadow: 0px 10px 10px 2px rgb(240, 240, 240) inset;		/* Establece una sombra rgb al elemento */
+	border-radius: 3px;
+}
+/* Fomato específico para el campo Color */
+.color {
+	border:solid rgb(200, 200, 200);
+	border-width: 1px;
+	width: 20.3%;
+	height: 15px;
+	padding-right: 25px;
+	padding-left: 10px;
+}
+/* Fomato específico para el área de texto */
+.mensaje {
+	border:solid rgb(200, 200, 200);
+	border-width: 1px;
+	background-color: #fdfdfd;
+	box-shadow: 1px 5px 12px 1px rgb(240, 240, 240) inset;		/* Establece una sombra rgb al elemento */
+	border-radius: 3px;
+	
+}
+/* Fomato específico para el campo donde se permite adjuntar un documento */
+.cuponpdf {
+	border:solid rgb(200, 200, 200);
+	border-radius: 3px;
+	border-width: 1px;
+	box-shadow: 0px 10px 10px 2px rgb(240, 240, 240) inset;		/* Establece una sombra rgb al elemento */
+}
+/* Damos formato al botón de enviar */
+.enviar {
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(1, 150, 1);
+	width: 130px;
+	height: 33px;
+	border-radius: 3px;
+}

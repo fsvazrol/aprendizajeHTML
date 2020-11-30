@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link rel="stylesheet" type="text/css" href="Cuestionario_CSS_e2.css">
+<script>
+function funcionA(){
+	var radios = document.getElementsByClassName("A")
+	var len=radios.length
+	var contA=0
+	for (var i=0; i<len; i++){
+		if (radios[i].checked){
+			contA++
+		}
+	}
+	document.getElementById("resultA").innerHTML=contA;
+}
+function funcionB(){
+	var radios = document.getElementsByClassName("B")
+	var len=radios.length
+	var contB=0
+	for (var i=0; i<len; i++){
+		if (radios[i].checked){
+			contB++
+		}
+	}
+	document.getElementById("resultB").innerHTML=contB;
+}
+function funcionC(){
+	var radios = document.getElementsByClassName("C")
+	var len=radios.length
+	var contC=0
+	for (var i=0; i<len; i++){
+		if (radios[i].checked){
+			contC++
+		}
+	}
+	document.getElementById("resultC").innerHTML=contC;
+}
+function funcionD(){
+	var radios = document.getElementsByClassName("D")
+	var len=radios.length
+	var contD=0
+	for (var i=0; i<len; i++){
+		if (radios[i].checked){
+			contD++
+		}
+	}
+	document.getElementById("resultD").innerHTML=contD;
+}
+</script>
+</head>
+<body>
+<p> De las siguientes características personales indica con cuál de cada cuatro <p2>(sólo una de ellas)</p2> te sientes más identificado/a: </p>
+<form>
+<div onchange="funcionA()">
+<div onchange="funcionB()">
+<div onchange="funcionC()">
+<div onchange="funcionD()">
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox1" class="A"></label></td>
+	<td id="celda2">Directo/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox1" class="B"></label></td>
+	<td id="celda2">Hablador/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox1" class="C"></label></td>
+	<td id="celda2">Suave</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox1" class="D"></label></td>
+	<td id="celda2">Primero analizo cuidadosamente las situaciones</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox2" class="A" ></label></td>
+	<td id="celda2">Atrevido/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox2" class="B" ></label></td>
+	<td id="celda2">Me entusiasmo con facilidad</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox2" class="C" ></label></td>
+	<td id="celda2">Tiendo a no participar activamente</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox2" class="D" ></label></td>
+	<td id="celda2">Me gusta que todo esté bien organizado</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox3" class="A" ></label></td>
+	<td id="celda2">Contundente</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox3" class="B" ></label></td>
+	<td id="celda2">Persuasivo/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox3" class="C" ></label></td>
+	<td id="celda2">Simpático/a</td>
+	
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox3" class="D" ></label></td>
+	<td id="celda2">Exacto/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox4" class="A" ></label></td>
+	<td id="celda2">Innovador/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox4" class="B" ></label></td>
+	<td id="celda2">Creativo/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox4" class="C" ></label></td>
+	<td id="celda2">Parte de un equipo</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox4" class="D" ></label></td>
+	<td id="celda2">Preciso</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox5" class="A" ></label></td>
+	<td id="celda2">Competitivo/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox5" class="B" ></label></td>
+	<td id="celda2">Optimisma</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox5" class="C" ></label></td>
+	<td id="celda2">Sereno/a</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox5" class="D" ></label></td>
+	<td id="celda2">Tradicional, las cosas como siempre</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox6" class="A" ></label></td>
+	<td id="celda2">Decidido/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox6" class="B" ></label></td>
+	<td id="celda2">Encantador/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox6" class="C" ></label></td>
+	<td id="celda2">Primero pienso y luego actúo</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox6" class="D" ></label></td>
+	<td id="celda2">Madura/o</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox7" class="A" ></label></td>
+	<td id="celda2">Solucionador/a de problemas</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox7" class="B" ></label></td>
+	<td id="celda2">Popular</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox7" class="C" ></label></td>
+	<td id="celda2">Sincero/a</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox7" class="D" ></label></td>
+	<td id="celda2">Objetivo/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox8" class="A" ></label></td>
+	<td id="celda2">Agresivo/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox8" class="B" ></label></td>
+	<td id="celda2">Segura/o de si misma/o</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox8" class="C" ></label></td>
+	<td id="celda2">Tengo mucha paciencia</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox8" class="D" ></label></td>
+	<td id="celda2">Perfeccionista en lo que hago</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox9" class="A" ></label></td>
+	<td id="celda2">Persistente</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox9" class="B" ></label></td>
+	<td id="celda2">Abierta/o</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox9" class="C" ></label></td>
+	<td id="celda2">Posesiva/o</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox9" class="D" ></label></td>
+	<td id="celda2">Necesito tiempo</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox10" class="A" ></label></td>
+	<td id="celda2">Exigente</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox10" class="B" ></label></td>
+	<td id="celda2">Sociable</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox10" class="C" ></label></td>
+	<td id="celda2">Amable</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox10" class="D" ></label></td>
+	<td id="celda2">Reflexivo/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox11" class="A" ></label></td>
+	<td id="celda2">Impaciente</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox11" class="B" ></label></td>
+	<td id="celda2">Impulsiva/o</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox11" class="C" ></label></td>
+	<td id="celda2">Tranquila/o</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox11" class="D" ></label></td>
+	<td id="celda2">Metódico/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox12" class="A" ></label></td>
+	<td id="celda2">Dominante</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox12" class="B" ></label></td>
+	<td id="celda2">Confiado/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox12" class="C" ></label></td>
+	<td id="celda2">Conpresivo/a</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox12" class="D" ></label></td>
+	<td id="celda2">Buscador de datos</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox13" class="A" ></label></td>
+	<td id="celda2">Asumo riesgos</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox13" class="B" ></label></td>
+	<td id="celda2">Me relaciono bien</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox13" class="C" ></label></td>
+	<td id="celda2">Relajado/a</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox13" class="D" ></label></td>
+	<td id="celda2">Siempre me pongo el listón alto</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox14" class="A" ></label></td>
+	<td id="celda2">Con iniciativa</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox14" class="B" ></label></td>
+	<td id="celda2">Generoso/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox14" class="C" ></label></td>
+	<td id="celda2">Estable</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox14" class="D" ></label></td>
+	<td id="celda2">Educada/o</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox15" class="A" ></label></td>
+	<td id="celda2">Aventurero/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox15" class="B" ></label></td>
+	<td id="celda2">Convenzo fácilmente a los demás</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox15" class="C" ></label></td>
+	<td id="celda2">Sé escuchar</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox15" class="D" ></label></td>
+	<td id="celda2">Rígido</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox16" class="A" ></label></td>
+	<td id="celda2">Autoritario/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox16" class="B" ></label></td>
+	<td id="celda2">Me emociono fácilmente</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox16" class="C" ></label></td>
+	<td id="celda2">Me gusta complacer a los demás</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox16" class="D" ></label></td>
+	<td id="celda2">Comedido/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox17" class="A" ></label></td>
+	<td id="celda2">Inquisitivo/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox17" class="B" ></label></td>
+	<td id="celda2">Emprendedor/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox17" class="C" ></label></td>
+	<td id="celda2">Me cuesta mostrarme tal y como soy</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox17" class="D" ></label></td>
+	<td id="celda2">Lógico/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox18" class="A" ></label></td>
+	<td id="celda2">Rápido/a</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox18" class="B" ></label></td>
+	<td id="celda2">Agradable</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox18" class="C" ></label></td>
+	<td id="celda2">Pasivo/a</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox18" class="D" ></label></td>
+	<td id="celda2">Cuidadoso/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<td><label>A<input type="radio" name="cbox19" class="A" ></label></td>
+	<td id="celda2">Me encantan los retos</td>
+</tr>
+<tr>
+	<td><label>B<input type="radio" name="cbox19" class="B" ></label></td>
+	<td id="celda2">Efusivo/a</td>
+</tr>
+<tr>
+	<td><label>C<input type="radio" name="cbox19" class="C" ></label></td>
+	<td id="celda2">Bueno/a</td>
+</tr>
+<tr>
+	<td><label>D<input type="radio" name="cbox19" class="D" ></label></td>
+	<td id="celda2">Reservado/a</td>
+</tr>
+</table>
+</br>
+<table border="1" id="celda">
+<tr>
+	<th colspan= "8">TOTALES</th>
+</tr>
+<tr>
+	<td class="celda3"><strong>A</strong></td>
+	<td id="resultA" class="celda3"></td>
+	<td class="celda3"><strong>B</strong></td>
+	<td id="resultB" class="celda3"></td>
+	<td class="celda3"><strong>C</strong></td>
+	<td id="resultC" class="celda3"></td>
+	<td class="celda3"><strong>D</strong></td>
+	<td id="resultD" class="celda3"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>

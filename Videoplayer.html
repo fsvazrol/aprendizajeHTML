@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"> 
+		<title>Reproductor de Video</title>
+		<link rel="stylesheet" href="Videoplayer.css">
+		<script src="Videoplayer.js"></script>
+	</head>
+	<body>
+		<section id="reproductor">
+			<video id="medio" width="720" height="400" poster="https://wallpaperxyz.com/wp-content/uploads/Full-HD-1080p-Wallpapers-Desktop-Backgrounds-HD-Wallpaperxyz-dot-Com-2.jpg">
+				<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" type="video/mp4" />
+				<source src="https://www.dropbox.com/s/37yv9j932kunkyx/video.webm?dl=1" type="video/webm" />
+				<source src="https://www.dropbox.com/s/eo1s4ae5q8klhd1/video.ogv?dl=1" type="video/ogv" />
+			</video>
+			<nav>
+				<div id="botones">
+					<button type="button" id="reproducir" title="Reproduce el video">►</button>
+					<button title="Retrocede 5 segundos" onclick=skip(-5)>&lt;&lt;</button>
+					<button title="Avanza 5 segundos" onclick=skip(5)>&gt;&gt;</button>
+				</div>
+				<div id="barra">
+				<div id="progreso"></div>
+				</div>
+			  	<div id="Pcompleta">
+					<button title="Cambia al modo Pantalla Completa" onclick="launchFullScreen(document.documentElement);">Modo Pantalla Completa</button>
+				</div>
+				<div style="clear: both"></div>
+			</nav>
+		</section>
+	</body>
+</html>

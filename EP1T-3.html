@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio Puntuable EP1T-3</title>
+    <!--Indicamos al documento html la ruta y archivo de la hoja de estilos-->
+    <link rel="stylesheet" type="text/css" href="EP1T-3.css">
+</head>
+
+<body>
+    <!--Construcción del formulario-->
+    <form method="post" action="mailto:atolon@fundacionsafa.es" enctype="text/plain">
+        <h1>Ven a aprender con nosotros</h1>
+        <!--Se asignan clases a los article para luego darles estilo en CSS-->
+        <article class="selection">
+            <div>Centro: *</div>
+            <input type="radio" name="centro" value="Patronato Vereda" id="vereda"><label for="vereda">Patronato Vereda</label><br />
+            <input type="radio" name="centro" value="Blanca Paloma" id="paloma"><label for="paloma">Blanca Paloma</label><br />
+            <input type="radio" name="centro" value="Ntra. Sra. Reyes" id="reyes"><label for="reyes">Ntra. Sra. Reyes</label>
+        </article>
+        <article class="selection" id="curso">
+            <div>Curso: *</div>
+            <select name="curso" id="selec">
+                <option>---</option>
+                <option>1ºESO</option>
+                <option>2ºESO</option>
+                <option>3ºESO</option>
+                <option>4ºESO</option>
+            </select>
+        </article>
+        <article class="checkbox">
+            <div>Optativas: </div>
+            <input type="checkbox" name="optativas" value="dibujo" id="dibujo"><label for="dibujo">Dibujo</label><br />
+            <input type="checkbox" name="optativas" value="musica" id="musica"><label for="musica">Música</label><br />
+            <input type="checkbox" name="optativas" value="frances" id="frances"><label for="frances">Francés</label><br />
+            <input type="checkbox" name="optativas" value="informatica" id="informatica"><label for="informatica">Informática</label>
+        </article>
+        <article class="radio">
+            <div>Comedor: *</div>
+            <input type="radio" name="comedor" value="entresemana" id="lunesviernes"><label for="lunesviernes">De lunes a viernes</label><br />
+            <input type="radio" name="comedor" value="puntualmente" id="puntual"><label for="puntual">Puntualmente</label><br />
+            <input type="radio" name="comedor" value="no" id="nodeseo"><label for="nodeseo">No deseo</label>
+        </article>
+        <article class="checkbox">
+            <div>Extraescolares: </div>
+            <input type="checkbox" name="extraescolares" value="voleibol" id="voleibol"><label for="voleibol">Voleibol</label><br />
+            <input type="checkbox" name="extraescolares" value="baile" id="baile"><label for="baile">Baile</label><br />
+            <input type="checkbox" name="extraescolares" value="baloncesto" id="baloncesto"><label for="Baloncesto">Baloncesto</label><br />
+            <input type="checkbox" name="extraescolares" value="pintura" id="pintura"><label for="pintura">Pintura</label>
+        </article>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+            <input type="submit" value="¡Info!" id="button">
+    </form>
+</body>
+</html>

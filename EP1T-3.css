@@ -1,0 +1,66 @@
+@charset “utf-8”;
+/*Damos formato al cuerpo de la página web*/
+body { 
+	background-color:#99CCFF; 
+	font-family: Arial; 
+	font-size: 15px;
+}
+/*Damos formato solo al formulario*/
+form { 
+	background-color:#006600;
+    width:890px;  /*890 y 430*/
+	height:230px; 
+	border-radius:15px; 
+	padding:1px; 
+	margin-left:auto; 
+    margin-right:auto; 
+    align-items: center;
+    box-align: center;
+}
+h1 { 
+	color:#FFFFFF; 
+	text-align:center;
+	box-align: ;
+}
+/*Damos formato a cada encabezado de cada bloque (Curso, Optativas, Comedor, etc...)*/
+div { 
+	color:#000000; 
+	margin:2px;
+	font-weight:bold;
+}
+/*Damos formato a casa article usando las clases que definimos previamente en HTML*/
+article.radio, article.checkbox, article.selection { 
+	width:150px; 
+	height:15;
+	background-color:#3399CC; 
+	color:#000000; 
+	border-style:solid;
+	border-width:2px;
+	border-color:#FADF98; 
+	padding:7px; 
+	margin:5px; 
+	border-radius:10px;
+	float:left;
+}
+#curso {
+    width:150px;
+}
+#selec {
+    width:125px;
+}
+/*Damos formato a la imagen-botón que está al pie del formulario*/
+#button { 
+	color:#990000; 
+	font-weight:bold;
+	font-size:20px;
+	width:75px; 
+	height:73px; 
+	border-width:4px; 
+	border-color:#003399; 
+	padding-left:4px; 
+	padding-right:4px; 
+	border-radius:30px;
+	background-image:url(Images/safaep1t3.png);
+    margin-left: 50%;
+    margin-right: 50%;
+}
